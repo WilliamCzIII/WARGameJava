@@ -53,7 +53,6 @@ public class Player {
 	
 	public void drawToHand(Deck deck ){
 		Card drawnCard = deck.draw();
-		System.out.println(drawnCard.getValue());
 		if ( drawnCard != null) {
 			hand.add(drawnCard);
 		}
