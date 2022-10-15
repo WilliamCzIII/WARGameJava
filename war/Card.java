@@ -26,7 +26,7 @@ public class Card {
 		this.name = name;
 	}
 	public void describe() {
-		System.out.println(value + " of " + name);
+		System.out.println( name);
 	}
 	
 	
