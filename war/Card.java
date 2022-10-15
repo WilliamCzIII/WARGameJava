@@ -7,7 +7,7 @@ public class Card {
 	
 
 	
-	public Card() {
+	public Card() {//constructor for the Card object
 		this.setValue(value);
 		this.setName(name);
 	}

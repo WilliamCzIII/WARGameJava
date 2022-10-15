@@ -5,7 +5,7 @@ public class Deck{
 	
 	List<Card> cards = new ArrayList<Card>();
 	
-	public Deck() {
+	public Deck() {//constructor for the Deck object
 		buildDeck();
 	}
 
@@ -36,7 +36,7 @@ public class Deck{
 		
 	}
 
-	private List<Card> createSuit(int value, String suit){
+	private List<Card> createSuit(int value, String suit){ // how to implement the card's suit to each card of a certain value
 		List<Card> suitList = new ArrayList<Card>();
 		for ( int i = 0; i< 4; i++) {
 			Card suitCard = new Card();
@@ -61,7 +61,7 @@ public class Deck{
 		return suitList;
 	}
 	
-	private void buildDeck() {
+	private void buildDeck() { // how to build the deck with each value being passed through the createSuit method to create 4 cards with different suits but same values
 		for ( int i =2 ; i<=14 ; i++) {
 			if ( i == 2) {
 				cards.addAll(createSuit(i, "Two"));

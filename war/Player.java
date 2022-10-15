@@ -6,7 +6,7 @@ public class Player {
 	 int score;
 	 String name;
 	
-	 public Player() {
+	 public Player() {//constructor for the Player object
 		 this.score = 0;
 		 this.name= name;
 	 }
@@ -44,14 +44,14 @@ public class Player {
 		}
 	}
 	
-	public Card flip(List<Card> hand) {
+	public Card flip(List<Card> hand) {//flipping each card from the player's hand
 		Card topCard = new Card();
 		topCard= hand.get(0);
 		hand.remove(0);
 		return topCard;
 	}
 	
-	public void drawToHand(Deck deck ){
+	public void drawToHand(Deck deck ){//drawing cards from the deck to player's hand
 		Card drawnCard = deck.draw();
 		if ( drawnCard != null) {
 			hand.add(drawnCard);
@@ -61,7 +61,7 @@ public class Player {
 		}
 	}
 	
-	public void incrementScore() {
+	public void incrementScore() {// how to increase player's score 
 		this.score = score+1;
 	}
 
