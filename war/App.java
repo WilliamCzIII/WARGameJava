@@ -20,10 +20,8 @@ public static void main( String[] args) {
 			}
 		
 		for ( int i = 0; i< 26; i++) {
-			Card topCard = new Card();
-			Card topCard2 = new Card();
-			topCard = player1.flip(player1.hand);
-			topCard2 = player2.flip(player2.hand);
+			Card topCard = player1.flip(player1.hand);
+			Card topCard2 = player2.flip(player2.hand);
 			if ( topCard.getValue() > topCard2.getValue()) {
 				player1.incrementScore();
 			}

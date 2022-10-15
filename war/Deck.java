@@ -6,8 +6,7 @@ public class Deck{
 	List<Card> cards = new ArrayList<Card>();
 	
 	public Deck() {
-		this.cards = cards;
-		buildDeck(cards);
+		buildDeck();
 	}
 
 	public void shuffle() {
@@ -24,15 +23,15 @@ public class Deck{
 	
 
 	
-	public Card draw(List<Card> cards) {
+	public Card draw() {
 		Card topCard = new Card();
 		if (cards.size() == 0) {
 			System.out.println("The deck is empty.");
 			return null;
 		} else {
 			topCard= cards.get(0);
-					cards.remove(0);
-		return topCard;
+			cards.remove(0);
+			return topCard;
 		}
 		
 	}
@@ -44,21 +43,25 @@ public class Deck{
 			suitCard.setValue(value);
 			if ( i ==0) {
 				suitCard.setName(suit + " of Clubs");
+				suitList.add(suitCard);
 			}
 			else if ( i == 1) {
 				suitCard.setName(suit + " of Diamonds");
+				suitList.add(suitCard);
 			}
 			else if ( i == 2) {
 				suitCard.setName(suit + " of Spades");
+				suitList.add(suitCard);
 			}
 			else {
 				suitCard.setName(suit + " of Hearts");
+				suitList.add(suitCard);
 			}
 		}
 		return suitList;
 	}
 	
-	private void buildDeck(List<Card> cards) {
+	private void buildDeck() {
 		for ( int i =2 ; i<=14 ; i++) {
 			if ( i == 2) {
 				cards.addAll(createSuit(i, "Two"));

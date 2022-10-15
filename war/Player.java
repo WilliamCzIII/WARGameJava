@@ -9,7 +9,6 @@ public class Player {
 	 public Player() {
 		 this.score = 0;
 		 this.name= name;
-		 this.hand= null;
 	 }
 	 
 	 public int getScore() {
@@ -53,9 +52,10 @@ public class Player {
 	}
 	
 	public void drawToHand(Deck deck ){
-		Card card = new Card();
-		if ( card = deck.draw(deck.cards)  != null) {
-			hand.add(card);
+		Card drawnCard = deck.draw();
+		System.out.println(drawnCard.getValue());
+		if ( drawnCard != null) {
+			hand.add(drawnCard);
 		}
 		else {
 			System.out.println("The deck is empty.");
